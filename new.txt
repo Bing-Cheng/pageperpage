@@ -1,0 +1,361 @@
+<?php
+//use Library\Section;
+//use Model\v3\User;
+
+//if (!isset($user)) {throw new InvalidArgumentException('Missing variable: "$user".', E_USER_WARNING); $user=new User;}
+
+//Section::add_to_section('script', '<script src="/_/lib/fadeslideshow.js"></script>');
+
+//Section::begin('content')
+?>
+<head>
+  <meta charset="utf-8">
+  <title>SlidesJS Standard Code Example</title>
+  <meta name="description" content="SlidesJS is a simple slideshow plugin for jQuery. Packed with a useful set of features to help novice and advanced developers alike create elegant and user-friendly slideshows.">
+  <meta name="author" content="Nathan Searles">
+
+  <!-- SlidesJS Required (if responsive): Sets the page width to the device width. -->
+  <meta name="viewport" content="width=device-width">
+  <!-- End SlidesJS Required -->
+
+  <!-- CSS for slidesjs.com example -->
+  <link rel="stylesheet" href="css/example.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <!-- End CSS for slidesjs.com example -->
+
+  <!-- SlidesJS Optional: If you'd like to use this design -->
+  <style>
+    body {
+      -webkit-font-smoothing: antialiased;
+      font: normal 15px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: #232525;
+      padding-top:70px;
+    }
+
+    #slides {
+      display: none
+    }
+
+    #slides .slidesjs-navigation {
+      margin-top:5px;
+    }
+
+    a.slidesjs-next,
+    a.slidesjs-previous,
+    a.slidesjs-play,
+    a.slidesjs-stop {
+      background-image: url(img/btns-next-prev.png);
+      background-repeat: no-repeat;
+      display:block;
+      width:12px;
+      height:18px;
+      overflow: hidden;
+      text-indent: -9999px;
+      float: left;
+      margin-right:5px;
+    }
+
+    a.slidesjs-next {
+      margin-right:10px;
+      background-position: -12px 0;
+    }
+
+    a:hover.slidesjs-next {
+      background-position: -12px -18px;
+    }
+
+    a.slidesjs-previous {
+      background-position: 0 0;
+    }
+
+    a:hover.slidesjs-previous {
+      background-position: 0 -18px;
+    }
+
+    a.slidesjs-play {
+      width:15px;
+      background-position: -25px 0;
+    }
+
+    a:hover.slidesjs-play {
+      background-position: -25px -18px;
+    }
+
+    a.slidesjs-stop {
+      width:18px;
+      background-position: -41px 0;
+    }
+
+    a:hover.slidesjs-stop {
+      background-position: -41px -18px;
+    }
+
+    .slidesjs-pagination {
+      margin: 7px 0 0;
+      float: right;
+      list-style: none;
+    }
+
+    .slidesjs-pagination li {
+      float: left;
+      margin: 0 1px;
+    }
+
+    .slidesjs-pagination li a {
+      display: block;
+      width: 13px;
+      height: 0;
+      padding-top: 13px;
+      background-image: url(img/pagination.png);
+      background-position: 0 0;
+      float: left;
+      overflow: hidden;
+    }
+
+    .slidesjs-pagination li a.active,
+    .slidesjs-pagination li a:hover.active {
+      background-position: 0 -13px
+    }
+
+    .slidesjs-pagination li a:hover {
+      background-position: 0 -26px
+    }
+
+    #slides a:link,
+    #slides a:visited {
+      color: #333
+    }
+
+    #slides a:hover,
+    #slides a:active {
+      color: #9e2020
+    }
+
+    .navbar {
+      overflow: hidden
+    }
+  </style>
+  <!-- End SlidesJS Optional-->
+
+  <!-- SlidesJS Required: These styles are required if you'd like a responsive slideshow -->
+  <style>
+    #slides {
+      display: none
+    }
+
+    .container {
+      margin: 0 auto
+    }
+
+    /* For tablets & smart phones */
+    @media (max-width: 767px) {
+      body {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .container {
+        width: auto
+      }
+    }
+
+    /* For smartphones */
+    @media (max-width: 480px) {
+      .container {
+        width: auto
+      }
+    }
+
+    /* For smaller displays like laptops */
+    @media (min-width: 768px) and (max-width: 979px) {
+      .container {
+        width: 724px
+      }
+    }
+
+    /* For larger displays */
+    @media (min-width: 1200px) {
+      .container {
+        width: 1170px
+      }
+    }
+  </style>
+  <!-- SlidesJS Required: -->
+</head>
+	  <style>html.wait * { cursor: wait !important; }</style>
+      <div align="center">
+      <table width="100%" border="0" cellpadding="0" cellspacing="4">
+      <tr>
+        <td align="left" valign="top" style="margin:0px; height:100%; background-color: #CCCCCC; padding: 4px; ">
+          </p>
+          	<p style="display:inline-block;">Welcome: <strong><?=$user?></strong></p>
+          	<form action='/login/logout' method="post"  style="display:inline-block;"><button class="btn btn-link">Log Out</button></form>
+          	<iframe src="order/active-orders" style="width:98%; height:350px; margin-top:-15px;"></iframe>
+          </td>
+        <td align="center" valign="top" style="margin:0px; background-color: #CCCCCC; padding: 4px; "><table width="100%" border="1" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="240"><table width="100%"  border="0" cellpadding="1" cellspacing="1" bgcolor="#CCCCCC">
+              <tr>
+                <td><img src="_/img/v1/letter_icon.png" style="height:90px; width:90px;"></td>
+                <td align="left">                  <p align="left"><font size="3" face="Arial, Helvetica, sans-serif"><strong>LETTER<br>
+                        <font size="2">MAILING</font></strong></font></p>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2" align="right"><img src="_/img/v1/quicklinks_cart_01.png" style="height:34px; width:120px;" border="0" usemap="#Map2"></td>
+              </tr>
+            </table></td>
+            <td width="240"><table width="100%"  border="0" cellpadding="1" cellspacing="1" bgcolor="#CCCCCC">
+              <tr>
+                <td><img src="_/img/v1/postcard_icon.png" style="height:90px; width:90px;"></td>
+                <td align="left"><p align="left"><font size="3" face="Arial, Helvetica, sans-serif"><strong>POSTCARD<br>
+                        <font size="2">MAILING
+                        </font> </strong></font></p></td>
+              </tr>
+              <tr>
+                <td colspan="2" align="right"><img src="_/img/v1/quicklinks_cart_01.png" style="height:34px; width:120px;" border="0" usemap="#Map3"></td>
+              </tr>
+            </table></td>
+            <td width="240"><table width="100%"  border="0" cellpadding="1" cellspacing="1" bgcolor="#CCCCCC">
+              <tr>
+                <td><img src="_/img/v1/ballot_icon.png" style="height:90px; width:90px;"></td>
+                <td align="left"><div align="left"><font size="3" face="Arial, Helvetica, sans-serif"><strong>BALLOT<br>
+                      <font size="2">MAILING</font></strong> </font></div></td>
+              </tr>
+              <tr>
+                <td colspan="2" align="right"><img src="_/img/v1/quicklinks_cart_01.png" style="height:34px; width:120px;" border="0" usemap="#Map4"></td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td><table width="100%"  border="0" cellpadding="1" cellspacing="1" bgcolor="#CCCCCC">
+              <tr>
+                <td><img src="_/img/v1/statement_icon.png" style="height:90px; width:90px;"></td>
+                <td align="left"><div align="left"><font size="3" face="Arial, Helvetica, sans-serif"><strong>STATEMENT<br>
+                        <font size="2">MAILING
+                        </font></strong></font></div></td>
+              </tr>
+              <tr>
+                <td colspan="2" align="right"><img src="_/img/v1/quicklinks_cart_01.png" style="height:34px; width:120px;" border="0" usemap="#Map5"></td>
+              </tr>
+            </table></td>
+            <td><table width="100%"  border="0" cellpadding="1" cellspacing="1" bgcolor="#CCCCCC">
+              <tr>
+                <td><img src="_/img/v1/couponbook_icon.png" style="height:90px; width:90px;"></td>
+                <td align="left"><div align="left"><font size="3" face="Arial, Helvetica, sans-serif"><strong>COUPON
+                        BOOK<br>
+                        <font size="2">MAILING </font></strong></font></div></td>
+              </tr>
+              <tr>
+                <td colspan="2" align="right"><img src="_/img/v1/quicklinks_cart_01.png" style="height:34px; width:120px;" border="0" usemap="#Map6"></td>
+              </tr>
+            </table></td>
+            <td><table width="100%"  border="0" cellpadding="1" cellspacing="1" bgcolor="#CCCCCC">
+              <tr>
+                <td><img src="_/img/v1/pdf_icon.png" style="height:90px; width:90px;"></td>
+                <td align="left"><div align="left"><font size="3" face="Arial, Helvetica, sans-serif"><strong>PDF<br>
+                        <font size="2">MAILING</font><br>
+                </strong><font size="2"><font size="1">&quot;Violations&quot; &amp; &quot;Late
+                Notices&quot; </font></font><strong>                        </strong></font></div></td>
+              </tr>
+              <tr>
+                <td colspan="2" align="right"><img src="_/img/v1/quicklinks_cart_01.png" style="height:34px; width:120px;" border="0" usemap="#Map7"></td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td><table width="100%"  border="0" cellpadding="1" cellspacing="1" bgcolor="#CCCCCC">
+              <tr>
+                <td><img src="_/img/v1/supplies_icon.png" style="height:90px; width:90px;"></td>
+                <td align="left"><div align="left"><font size="3" face="Arial, Helvetica, sans-serif"><strong>SUPPLIES</strong></font></div></td>
+              </tr>
+              <tr>
+                <td colspan="2" align="right"><img src="_/img/v1/quicklinks_cart_01.png" style="height:34px; width:120px;" border="0" usemap="#Map8"></td>
+              </tr>
+            </table></td>
+            <td align="center" valign="middle">
+            <script type="text/javascript">
+
+/* var mygallery=new fadeSlideShow({
+	wrapperid: "fadeshow1", //ID of blank DIV on page to house Slideshow
+	dimensions: [213, 127], //width/height of gallery in pixels. Should reflect dimensions of largest image
+	imagearray: [
+		["hoa_feature/smaller_slider.png", "", "", ""],
+		["hoa_feature/smaller_slider2.png", "", "", ""],
+		["hoa_feature/smaller_slider3.png", "", "", ""],
+		 //<--no trailing comma after very last image element!
+	],
+	displaymode: {type:'auto', pause:2500, cycles:0, wraparound:false},
+	persist: false, //remember last viewed slide and recall within same session?
+	fadeduration: 500, //transition duration (milliseconds)
+	descreveal: "ondemand",
+	togglerid: ""
+}) */
+    $(function() {
+      $('#slides').slidesjs({
+        width: 196,
+        height: 131,
+        play: {
+          active: true,
+          auto: true,
+          interval: 4000,
+          swap: true
+        }
+      });
+    });
+</script>
+<div id="fadeshow1">
+    <div id="slides">
+      <img src="img/example-slide-1.jpg" alt="Photo by: Missy S Link: http://www.flickr.com/photos/listenmissy/5087404401/" height="196" width="131">
+      <img src="img/example-slide-2.jpg" alt="Photo by: Daniel Parks Link: http://www.flickr.com/photos/parksdh/5227623068/" height="196" width="131">
+      <img src="img/example-slide-3.jpg" alt="Photo by: Mike Ranweiler Link: http://www.flickr.com/photos/27874907@N04/4833059991/" height="196" width="131">
+      <img src="img/example-slide-4.jpg" alt="Photo by: Stuart SeegerLink: http://www.flickr.com/photos/stuseeger/97577796/" height="196" width="131">
+    </div>
+</div>
+
+</td>
+            <td><table width="100%"  border="0" cellpadding="1" cellspacing="1" bgcolor="#CCCCCC">
+              <tr>
+                <td><img src="_/img/v1/project_icon.png" style="height:90px; width:90px;"></td>
+                <td align="left"><div align="left"><font size="3" face="Arial, Helvetica, sans-serif"><strong>CUSTOM<br>
+                        <font size="2">PROJECTS
+                        </font> </strong></font></div></td>
+              </tr>
+              <tr>
+                <td colspan="2" align="right"><img src="_/img/v1/quicklinks_cart_01.png" style="height:34px; width:120px;" border="0" usemap="#Map10"></td>
+              </tr>
+            </table></td>
+          </tr>
+        </table></td>
+        </tr>
+</table>
+
+</div>
+
+<map name="Map2">
+<area shape="rect" coords="2,2,117,34" href="order/select-product/letter">
+</map>
+<map name="Map3">
+<area shape="rect" coords="1,2,120,33" href="order/select-product/postcard"">
+</map>
+<map name="Map4">
+<area shape="rect" coords="1,0,117,32" href="order/select-product/ballot">
+</map>
+<map name="Map5">
+<area shape="rect" coords="0,0,120,33" href="order/select-product/statement">
+</map>
+<map name="Map6">
+<area shape="rect" coords="2,1,120,32" href="order/select-product/coupon-book">
+</map>
+<map name="Map7">
+<area shape="rect" coords="2,1,118,33" href="order/select-product/pdf">
+</map>
+<map name="Map8">
+<area shape="rect" coords="1,-1,119,34" href="order/select-product/supplies">
+</map>
+<map name="Map9">
+<area shape="rect" coords="4,2,117,32" href="#">
+</map>
+<map name="Map10">
+<area shape="rect" coords="1,2,120,33" href="home/request-estimate">
+</map>
+
